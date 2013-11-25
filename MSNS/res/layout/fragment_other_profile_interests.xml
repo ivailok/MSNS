@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:descendantFocusability="afterDescendants"
+    tools:context=".fragments/InterestsFragment" >
+    
+    <LinearLayout
+        android:id="@+id/otherProfileInterestsStatus"
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center"
+	    android:layout_gravity="center"
+	    android:orientation="vertical"
+	    android:visibility="visible" >
+    
+		<ProgressBar
+	    	style="?android:attr/progressBarStyleLarge"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="8dp" />
+	
+	    <TextView
+	        android:id="@+id/loadingScreenText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="16dp"
+	        android:fontFamily="sans-serif-light"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:text="@string/otherprofile_progress_getting_interests" />
+        
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/otherProfileNoInterests"
+	    android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" 
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:orientation="vertical" >
+		      
+	   	<TextView
+			android:id="@+id/otherNoInterestsText"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginBottom="16dp"
+		    android:fontFamily="sans-serif-light"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:text="@string/myprofile_no_interests" />
+	
+	</LinearLayout>
+	    
+	<LinearLayout 
+	    android:id="@+id/otherProfileInterestsForm"
+	    android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" 
+		android:orientation="vertical" >
+		      
+	  	<ListView
+			android:id="@+id/otherInterestsContainer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:choiceMode="none" >
+		</ListView>
+		
+	</LinearLayout>
+	
+</LinearLayout>

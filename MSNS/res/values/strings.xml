@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu_items">
+        <item>Profile</item>
+        <item>Interests</item>
+        <item>Sparks</item>
+        <item>Map</item>
+        <item>Notifications</item>
+    </string-array>
+
+    <string name="app_name">MSNS</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="profile_section1_title">Profile details</string>
+    <string name="profile_section2_title">Interests</string>
+    <string name="profile_section3_title">Sparks</string>
+    <string name="button_proceed_text">Proceed</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="age_label_text">Age:</string>
+    <string name="gender_label_text">Gender:</string>
+    <string name="nickname_label_text">Nickname:</string>
+    <string name="button_provide_google_acc_text">Provide Google Acc</string>
+    <string name="button_add_google_acc_text">Add Google Acc</string>
+    <string name="google_accounts_label_text">Google Accounts</string>
+    <string name="login_progress_signing_in">Signing in</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_nickname">Nickname must be between 4 and 30 symbols</string>
+    <string name="error_userID_required">Google account not provided</string>
+    <string name="google_account_hint">Google Account</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="meets_label_text">Meets:</string>
+    <string name="save_button_text">Save</string>
+    <string name="edit_button_text">Edit</string>
+    <string name="take_picture_button_text">Take picture</string>
+    <string name="select_image_button_text">Select image</string>
+    <string name="myprofile_progress_getting_info">Getting profile info</string>
+    <string name="myprofile_progress_getting_interests">Getting your interests</string>
+    <string name="myprofile_progress_getting_sparks">Getting your sparks</string>
+    <string name="myprofile_no_interests">No interests</string>
+    <string name="myprofile_new_interest_label">New interest</string>
+    <string name="add_button_text">Add</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_other_profile">OtherProfileActivity</string>
+    <string name="otherprofile_progress_getting_info">Getting profile info</string>
+    <string name="otherprofile_progress_getting_interests">Getting interests</string>
+    <string name="otherprofile_progress_getting_sparks">Getting sparks</string>
+
+</resources>

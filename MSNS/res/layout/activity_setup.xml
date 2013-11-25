@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/setupStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+	<LinearLayout
+	    android:id="@+id/defaultSetupView"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:id="@+id/nicknameLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:labelFor="@+id/nicknameField"
+	            android:text="@string/nickname_label_text" />
+	
+	        <EditText
+	            android:id="@+id/nicknameField"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:inputType="textPersonName" >
+	            <requestFocus />
+	        </EditText>
+	
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:id="@+id/ageLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/age_label_text" />
+	
+	        <Spinner
+		        android:id="@+id/ageSelector"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:id="@+id/genderLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/gender_label_text" />
+	
+	        <Spinner
+		        android:id="@+id/genderSelector"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="5dp"
+	        android:background="#33B5E5" >
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/selectedGoogleAcc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text=""
+	        android:hint="@string/google_account_hint"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true" />
+	    
+	    <Button
+	        android:id="@+id/provideGoogleAccButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_provide_google_acc_text" />
+	    
+	    <Button
+	        android:id="@+id/addGoogleAccButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_add_google_acc_text" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="5dp" 
+	        android:background="#33B5E5" >
+	    </LinearLayout>
+	    
+	    <Button
+	        android:id="@+id/proceedButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_proceed_text" />
+	</LinearLayout>
+</LinearLayout>
