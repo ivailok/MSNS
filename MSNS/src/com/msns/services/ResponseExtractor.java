@@ -1,15 +1,5 @@
 package com.msns.services;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-
-import org.apache.http.HttpResponse;
-
-import android.content.OperationApplicationException;
-
-import com.msns.models.HttpMethodTypes;
-import com.msns.models.HttpRequestObject;
 
 //public class ResponseExtractor {
 //	

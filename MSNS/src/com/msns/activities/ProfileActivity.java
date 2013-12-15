@@ -114,6 +114,7 @@ public class ProfileActivity extends AbstractNavDrawerActivity {
                 public void onSuccess(String response) {
                 	Type listType = new TypeToken<ArrayList<Interest>>() {}.getType();
                 	mInterests = new Gson().fromJson(response, listType);
+                	int data = mInterests.size();
                 	List<Fragment> fragments = getmFragments();
                     ((InterestsFragment)fragments.get(1)).setData(mInterests, false);
                 }

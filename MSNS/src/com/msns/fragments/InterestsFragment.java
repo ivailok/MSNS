@@ -52,7 +52,6 @@ public class InterestsFragment extends Fragment {
 		public void onClick(View v) {
 			String interest = String.valueOf(getmInterestSpinner().getSelectedItem());
 			addInterest(interest);
-			
 		}
 	};
 	
@@ -122,6 +121,7 @@ public class InterestsFragment extends Fragment {
     	        new BasicHeader("X-userID", userID)
             };
 			
+            final FragmentActivity currentActitivity = this.getActivity();
 			AsyncHttpClient client = new AsyncHttpClient();
             client.put(getActivity(), addInterestUrl, headers, null, "application/json", new AsyncHttpResponseHandler() {
 				
@@ -138,6 +138,8 @@ public class InterestsFragment extends Fragment {
             			
             			if (mInterests.size() == 1)
             			{
+            				InterestsAdapter adapter = new InterestsAdapter(getActivity(), R.layout.interests_list_item, mInterests);
+            	        	getmInterestsContainer().setAdapter(adapter);
             				showProgress(false, true);
             			}
             			
@@ -186,7 +188,6 @@ public class InterestsFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_profile_interests, 
 				container, false);
-		
 		return rootView;
 	}
 	
@@ -225,6 +226,7 @@ public class InterestsFragment extends Fragment {
 		final View profileInterestsForm = getmProfileInterestsForm();
 		
 		final View loadedInterestsView = hasInterests ? profileInterestsForm : profileNoInterests;
+		final View unloadedInterestsView = hasInterests ? profileNoInterests : profileInterestsForm;
 		
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
 			int shortAnimTime = getResources().getInteger(
@@ -241,6 +243,17 @@ public class InterestsFragment extends Fragment {
 						}
 					});
 
+			unloadedInterestsView.setVisibility(View.GONE);
+			unloadedInterestsView.animate().setDuration(shortAnimTime)
+					.alpha(isLoading ? 0 : 0)
+					.setListener(new AnimatorListenerAdapter() {
+						@Override
+						public void onAnimationEnd(Animator animation) {
+							unloadedInterestsView.setVisibility(isLoading ? View.GONE
+									: View.GONE);
+						}
+					});
+			
 			loadedInterestsView.setVisibility(View.VISIBLE);
 			loadedInterestsView.animate().setDuration(shortAnimTime)
 					.alpha(isLoading ? 0 : 1)

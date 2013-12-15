@@ -2,6 +2,7 @@ package com.msns.navdrawer;
 
 import android.content.Context;
 
+
 public class NavMenuItem implements NavDrawerItem {
 
 	public static final int ITEM_TYPE = 1 ;

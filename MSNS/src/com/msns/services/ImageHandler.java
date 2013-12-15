@@ -11,6 +11,7 @@ import android.graphics.Matrix;
 import android.net.Uri;
 import android.provider.MediaStore;
 
+
 public class ImageHandler {
 	private final int MAX_IMAGE_DIMENSION = 200;
 	

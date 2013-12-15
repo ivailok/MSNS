@@ -2,6 +2,7 @@ package com.msns.models;
 
 import java.util.Map;
 
+
 public class HttpRequestObject {
 	private int executingSeconds;
 

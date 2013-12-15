@@ -2,6 +2,7 @@ package com.msns.navdrawer;
 
 import android.widget.BaseAdapter;
 
+
 public class NavDrawerActivityConfiguration {
 	private int mainLayout;
     private int drawerShadow;

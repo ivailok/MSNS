@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
 	private ImageView bmImage;
 	private Context mContext;

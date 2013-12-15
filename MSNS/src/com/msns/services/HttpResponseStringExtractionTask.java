@@ -9,6 +9,7 @@ import org.apache.http.HttpEntity;
 
 import android.os.AsyncTask;
 
+
 public class HttpResponseStringExtractionTask extends
 		AsyncTask<HttpEntity, Void, String> {
 
