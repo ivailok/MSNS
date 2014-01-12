@@ -36,17 +36,9 @@
 	        android:text="@string/login_proceed_button_text" />
 
 	    <TextView
-	        android:id="@+id/username_constraint_textview"
+	        android:id="@+id/login_error_response"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="@string/username_constraint"
-	        android:textAppearance="?android:attr/textAppearanceSmall" />
-	    
-	    <TextView
-	        android:id="@+id/password_constraint_textview"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/password_constraint"
 	        android:textAppearance="?android:attr/textAppearanceSmall" />
 	    
     </LinearLayout>

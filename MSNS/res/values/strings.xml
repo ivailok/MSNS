@@ -21,6 +21,7 @@
     <string name="login_proceed_button_text">Login</string>
     <string name="username_constraint">*Username must be between 8 and 20 symbols</string>
     <string name="password_constraint">*Password must be at least 10 symbols</string>
+    <string name="passwords_constraint">*Passwords don\'t match</string>
     
     <string name="profile_section1_title">Profile details</string>
     <string name="profile_section2_title">Interests</string>
