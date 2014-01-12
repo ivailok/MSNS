@@ -287,21 +287,24 @@ public class SetupActivity extends Activity {
 	
 	private void proceed()
 	{
-		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-		String url = prefs.getString("EXTERNAL_SERVICES_BASE_URL", "") + "users/senduserdata";
+//		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+//		String url = prefs.getString("EXTERNAL_SERVICES_BASE_URL", "") + "users/senduserdata";
+//		
+//		UserRegisterModel model = new UserRegisterModel();
+//		model.age = this.mAge;
+//		model.gender = this.mGender;
+//		model.nickname = this.mNickname;
+//		model.userID = this.mUserID;
+//		
+//		HttpRequestObject requestData = new HttpRequestObject();
+//		requestData.setData(model);
+//		requestData.setHeaders(null);
+//		requestData.setUrl(url);
+//		
+//		SetupTask setupTask = new SetupTask(this);
+//		setupTask.execute(requestData);
 		
-		UserRegisterModel model = new UserRegisterModel();
-		model.age = this.mAge;
-		model.gender = this.mGender;
-		model.nickname = this.mNickname;
-		model.userID = this.mUserID;
-		
-		HttpRequestObject requestData = new HttpRequestObject();
-		requestData.setData(model);
-		requestData.setHeaders(null);
-		requestData.setUrl(url);
-		
-		SetupTask setupTask = new SetupTask(this);
-		setupTask.execute(requestData);
+		Intent intent = new Intent(this, ProfileActivity.class);
+		startActivity(intent);
 	}
 }
