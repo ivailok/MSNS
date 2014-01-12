@@ -12,12 +12,17 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
 
 public class CustomHttpClient {
+	private final int ConnectionTimeout = 5000;
+	
 	private String baseUrl;
 	private Context appContext;
 	
@@ -43,15 +48,17 @@ public class CustomHttpClient {
 		this.setAppContext(appContext);
 		
 		String localUrl = "http://10.0.2.2:8080/api/";
-		String remoteUrl = "http://meetsomenearbystranger.apphb.com/api/";
+		String remoteUrl = "http://msns.apphb.com/api/";
         
-        baseUrl = remoteUrl;
+        baseUrl = localUrl;
 	}
 	
 	
-	public HttpResponse Post(String extendedUrl, Object bodyContent , Map<String, String> headers) throws ClientProtocolException, IOException {
-		
-		HttpClient httpClient = new DefaultHttpClient();
+	public HttpResponse Post(String extendedUrl, Object bodyContent , Map<String, String> headers, int timeoutInMs) throws ClientProtocolException, IOException {
+		HttpParams httpParams = new BasicHttpParams();
+		HttpConnectionParams.setConnectionTimeout(httpParams, ConnectionTimeout);
+		HttpConnectionParams.setSoTimeout(httpParams, timeoutInMs);
+		HttpClient httpClient = new DefaultHttpClient(httpParams);
 		HttpPost httpPost = new HttpPost(baseUrl + extendedUrl);
 		
 		if (headers != null) {
@@ -69,8 +76,11 @@ public class CustomHttpClient {
 		return response;
 	}
 	
-	public HttpResponse Get(String extendedUrl, Map<String, String> headers) throws ClientProtocolException, IOException {
-		HttpClient httpClient = new DefaultHttpClient();
+	public HttpResponse Get(String extendedUrl, Map<String, String> headers, int timeoutInMs) throws ClientProtocolException, IOException {
+		HttpParams httpParams = new BasicHttpParams();
+		HttpConnectionParams.setConnectionTimeout(httpParams, ConnectionTimeout);
+		HttpConnectionParams.setSoTimeout(httpParams, timeoutInMs);
+		HttpClient httpClient = new DefaultHttpClient(httpParams);
 		HttpGet httpGet = new HttpGet(baseUrl + extendedUrl);
 		
 		if (headers != null) {
@@ -79,12 +89,17 @@ public class CustomHttpClient {
 			}
 		}
 		
+		
+		
 		HttpResponse response = httpClient.execute(httpGet);
 		return response;
 	}
 	
-	public HttpResponse Put(String extendedUrl, Object bodyContent, Map<String, String> headers) throws ClientProtocolException, IOException {
-		HttpClient httpClient = new DefaultHttpClient();
+	public HttpResponse Put(String extendedUrl, Object bodyContent, Map<String, String> headers, int timeoutInMs) throws ClientProtocolException, IOException {
+		HttpParams httpParams = new BasicHttpParams();
+		HttpConnectionParams.setConnectionTimeout(httpParams, ConnectionTimeout);
+		HttpConnectionParams.setSoTimeout(httpParams, timeoutInMs);
+		HttpClient httpClient = new DefaultHttpClient(httpParams);
 		HttpPut httpPut = new HttpPut(baseUrl + extendedUrl);
 		
 		if (headers != null) {

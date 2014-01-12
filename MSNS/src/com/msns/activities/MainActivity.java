@@ -22,11 +22,11 @@ public class MainActivity extends Activity {
 		
 		prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 		
-		storeBasicWebApiUrl();
+		//storeBasicWebApiUrl();
 		
-		navigateToProperActivity();
+		//navigateToProperActivity();
 		
-		finish();
+		//finish();
 	}
 
 	@Override
@@ -38,9 +38,9 @@ public class MainActivity extends Activity {
 	
 	private void storeBasicWebApiUrl() {
 		Editor editablePrefs = prefs.edit();
-		//String localUrl = "http://10.0.2.2:8080/api/";
+		String localUrl = "http://10.0.2.2:8080/api/";
 		String remoteUrl = "http://meetsomenearbystranger.apphb.com/api/";
-		editablePrefs.putString(BASE_API_URL, remoteUrl);
+		editablePrefs.putString(BASE_API_URL, localUrl);
 		editablePrefs.commit();
 	}
 	

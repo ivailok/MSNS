@@ -11,8 +11,17 @@
 
     <string name="app_name">MSNS</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_base">BaseActivity</string>
+    
+    <string name="signup_section1_title">Login</string>
+    <string name="signup_section2_title">Register</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repeated_password">Repeat password</string>
+    <string name="register_proceed_button_text">Register</string>
+    <string name="login_proceed_button_text">Login</string>
+    <string name="username_constraint">*Username must be between 8 and 20 symbols</string>
+    <string name="password_constraint">*Password must be at least 10 symbols</string>
+    
     <string name="profile_section1_title">Profile details</string>
     <string name="profile_section2_title">Interests</string>
     <string name="profile_section3_title">Sparks</string>
@@ -47,5 +56,9 @@
     <string name="otherprofile_progress_getting_info">Getting profile info</string>
     <string name="otherprofile_progress_getting_interests">Getting interests</string>
     <string name="otherprofile_progress_getting_sparks">Getting sparks</string>
+    <string name="title_activity_login_reg">MSNS</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
 </resources>

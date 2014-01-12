@@ -79,7 +79,7 @@ public class ProfileActivity extends AbstractNavDrawerActivity {
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		mViewPager.setOffscreenPageLimit(2);
         
-        if ( savedInstanceState == null ) {
+        if (savedInstanceState == null) {
         	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         	String baseUrl = prefs.getString("EXTERNAL_SERVICES_BASE_URL", "");
             String getMyProfileUrl = baseUrl + "users/getmyprofile";

@@ -4,13 +4,17 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="18" />
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
 
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />	
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,25 +24,27 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="com.msns.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission
+        android:name="com.msns.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
         <receiver
-            android:name=".GcmBroadcastReceiver"
+            android:name="com.msns.GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
                 <category android:name="com.msns" />
             </intent-filter>
         </receiver>
-        
-        <service android:name=".GcmIntentService" />
-        
+
+        <service android:name="com.msns.GcmIntentService" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -46,10 +52,7 @@
         <activity
             android:name="com.msns.activities.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name="com.msns.activities.ProfileActivity"
@@ -69,6 +72,15 @@
         <activity
             android:name="com.msns.activities.OtherProfileActivity"
             android:label="@string/title_activity_other_profile" >
+        </activity>
+        <activity
+            android:name="com.msns.activities.LoginRegActivity"
+            android:label="@string/title_activity_login_reg" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
